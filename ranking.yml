@@ -1,0 +1,61 @@
+name: Processar pontuação global
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ranking-global
+  cancel-in-progress: false
+
+jobs:
+  processar:
+    if: startsWith(github.event.issue.title, '[SCORE]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Validar e atualizar ranking
+        id: score
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/process_score.py "${{ github.event.issue.number }}" "${{ github.event.issue.user.login }}"
+
+      - name: Publicar ranking atualizado
+        if: steps.score.outputs.result != 'ignorado'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ranking.json
+          git commit -m "ranking: ${{ steps.score.outputs.result }} #${{ github.event.issue.number }}"
+          git pull --rebase origin main
+          git push origin main
+
+      - name: Informar resultado e fechar solicitação
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const result = '${{ steps.score.outputs.result }}';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: result === 'ignorado'
+                ? 'Resultado validado, mas não supera o recorde atual deste jogador.'
+                : `Resultado validado e ${result} no ranking global.`
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              labels: ['ranking-processado']
+            });

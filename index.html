@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DDS Recebimento - CD - Cabiunas Macaé: Desafios da Logística</title>
+<title>SUPER DDS WORLD - Sprint 3.0A - Perguntas Fases 5 e 6</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 :root{--ink:#17202a;--cream:#fff4cf;--sky:#5bc0eb;--blue:#1f6feb;--green:#39b54a;--yellow:#ffd23f;--red:#ef476f;--purple:#6c5ce7;--panel:#10233f}
@@ -83,6 +83,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;bac
 <div class="overlay" id="pause"><div class="modal"><h2>PAUSADO</h2><button class="pixel-btn" id="resumeBtn">CONTINUAR</button> <button class="pixel-btn" id="menuBtn">MENU DE FASES</button></div></div>
 <script>
 'use strict';
+// BUILD OFICIAL: SPRINT 3.0A - PERGUNTAS FASES 5 E 6 - 2026-09-28
 // Configure antes de publicar: substitua pelos dados do repositório GitHub.
 const GLOBAL_RANKING_CONFIG={
  owner:'SEU-USUARIO',
@@ -115,11 +116,16 @@ const questions=[
 ['Acesso restrito','Uma área restrita está sem controle adequado. O que fazer?',['Controlar o acesso e reportar','Permitir acesso acompanhado','Remover a sinalização','Liberar para experientes'],0,'Controle o acesso e reporte a condição.'],
 ['Carga mal posicionada','Uma carga está mal posicionada para transporte. O que fazer?',['Reavaliar amarração e distribuição antes de liberar','Liberar após registrar','Ajustar apenas a documentação','Pedir autorização ao motorista'],0,'Corrija distribuição e amarração antes da liberação.'],
 ['Parada segura','Ao identificar condição insegura, qual procedimento seguir?',['Parar, sinalizar e comunicar','Finalizar antes de reportar','Pedir apoio sem parar','Registrar no fim do turno'],0,'Pare, sinalize e comunique.'],
-['Empilhadeira em operação','No desafio final, como agir diante de empilhadeira na rota?',['Aguardar o término da operação ou encontrar outra rota','Passar se houver espaço','Solicitar passagem','Passar rapidamente'],0,'Aguarde ou use outra rota segura.'],
-['Trânsito de pedestres','Qual caminho mantém a separação dos veículos?',['Faixa verde','Próximo aos veículos','Rota não sinalizada','Área operacional'],0,'Utilize a faixa verde.'],
-['Resíduo incompatível','O que fazer antes de armazenar resíduos diferentes?',['Confirmar compatibilidade e segregação','Misturar semelhantes','Guardar sem identificação','Usar qualquer recipiente'],0,'Confirme compatibilidade e segregação.'],
-['Controle de acesso','Uma área restrita está sem controle de entrada. Como agir?',['Controlar o acesso e reportar','Liberar com observação','Permitir em urgências','Retirar barreiras'],0,'Controle o acesso e reporte.'],
-['Condição insegura','Uma condição insegura é identificada. O que fazer?',['Parar, sinalizar e comunicar','Continuar até finalizar','Pedir apoio após terminar','Registrar apenas no relatório'],0,'Pare, sinalize e comunique imediatamente.']
+['Equipamento adequado','O equipamento disponível suporta o peso da carga, mas o formato do material não permite apoio adequado. Ele pode ser utilizado?',['Sim, porque a capacidade de peso é suficiente','Sim, desde que a operação seja lenta','Sim, desde que outra pessoa acompanhe','Não, o equipamento também precisa ser adequado às características da carga'],3,'Capacidade de carga não é o único requisito. Geometria, estabilidade e método de movimentação também devem ser compatíveis.'],
+['Urgência na expedição','Uma carga precisa sair urgentemente, mas ainda falta uma etapa da inspeção. O que fazer?',['Liberar devido à prioridade','Manter os controles previstos mesmo diante da urgência operacional','Registrar a inspeção como concluída e verificar depois','Solicitar que o transportador faça a inspeção'],1,'Pressão de prazo não deve eliminar controles necessários para uma liberação segura e correta.'],
+['Identificação visível','Uma caixa foi armazenada de modo que a identificação não pode ser visualizada sem movimentá-la. Qual seria uma condição melhor?',['Manter porque o material está protegido','Retirar a identificação','Posicionar o material permitindo identificação e inspeção adequadas','Registrar uma foto e manter a posição'],2,'Armazenamento adequado também deve favorecer identificação, inspeção e rastreabilidade.'],
+['Armazenamento temporário','Um material precisa permanecer temporariamente fora da posição definitiva. Qual é uma boa prática?',['Utilizar uma área definida, identificar a situação e manter rastreabilidade','Colocá-lo no primeiro espaço disponível','Retirar sua identificação para evitar confusão','Registrar somente se permanecer mais de um turno'],0,'Mesmo situações temporárias devem preservar organização, identificação e rastreabilidade.'],
+['Cinta de amarração','Uma cinta de amarração apresenta desgaste visível, mas ainda não se rompeu. Qual é a melhor conduta?',['Utilizar somente para materiais leves','Utilizar uma última vez','Não utilizar até que sua condição seja considerada adequada para a atividade','Reforçar com um nó'],2,'Componentes de segurança com condição inadequada não devem permanecer em uso apenas porque ainda não falharam.'],
+['Trabalho padronizado','Qual é uma vantagem importante de estabelecer um trabalho padronizado?',['Impedir qualquer melhoria futura','Fazer todas as pessoas trabalharem mais rápido','Criar uma referência consistente para executar, avaliar e melhorar o processo','Eliminar a necessidade de treinamento'],2,'Um padrão estabelece uma referência para a execução e também um ponto de partida para futuras melhorias.'],
+['Causa raiz','Uma mesma falha de identificação aparece toda semana. Qual abordagem representa melhor o pensamento Lean?',['Investigar a causa raiz e implementar uma contramedida','Corrigir cada ocorrência individualmente','Criar mais espaço para materiais com problema','Aceitar uma taxa normal de erro'],0,'Problemas recorrentes precisam de investigação da causa, não apenas tratamento dos sintomas.'],
+['Pequenas melhorias','Uma alteração economiza apenas 30 segundos por operação, mas a atividade ocorre dezenas de vezes por dia. Como a proposta deve ser avaliada?',['Desconsiderada por ser pequena','Implementada imediatamente sem avaliação','Avaliada pelo efeito acumulado no processo e pelos riscos envolvidos','Aplicada somente quando houver redução de pessoal'],2,'Pequenas melhorias repetitivas podem produzir resultados relevantes quando analisadas no fluxo completo.'],
+['Propósito da Obeya','Qual é o principal propósito de uma Obeya?',['Armazenar documentos da operação','Tornar informações relevantes visíveis para alinhar pessoas e apoiar decisões','Substituir reuniões por mensagens','Apresentar apenas resultados positivos'],1,'Obeya conecta pessoas, informações, objetivos e ações em um ambiente visual compartilhado.'],
+['Indicador fora da meta','Durante uma reunião Obeya, um indicador aparece abaixo da meta. Qual é a resposta mais adequada?',['Retirar o indicador do painel','Esperar a próxima reunião','Alterar a meta para coincidir com o resultado','Entender o desvio, definir ação, responsável e acompanhamento'],3,'Gestão visual deve tornar desvios visíveis para acelerar entendimento, decisão e acompanhamento.']
 ];
 const levelDefs=[
 {title:'1-1 RECEBIMENTO',name:'DE MATERIAIS',desc:'Colete os EPIs e reconheça riscos básicos no recebimento.',sky:['#5bc0eb','#bde0fe'],ground:'#56a63f',accent:'#ffd23f',q:[0,1,2,3,4]},
@@ -127,7 +133,7 @@ const levelDefs=[
 {title:'3-1 QUÍMICOS',name:'GALPÃO DE INFLÁMAVEIS',desc:'Identifique perigos químicos, resíduos e informações de segurança.',sky:['#9b5de5','#2d1b69'],ground:'#3a7d44',accent:'#00f5d4',q:[10,11,12,13,14]},
 {title:'4-1 OFICINA ',name:'- GALPÃO ROV',desc:'Evite energias perigosas, máquinas e linhas de fogo.',sky:['#495057','#212529'],ground:'#6c757d',accent:'#ff9f1c',q:[15,16,17,18,19]},
 {title:'5-1 EXPEDIÇÃO',name:'DE MATERIAIS',desc:'Faça a conferência final e libere a operação com segurança.',sky:['#277da1','#90e0ef'],ground:'#577590',accent:'#f9c74f',q:[20,21,22,23,24]},
-{title:'6-1 DESAFIO',name:' BONUS',desc:'Desafio final com riscos combinados de todas as áreas.',sky:['#e63946','#457b9d'],ground:'#343a40',accent:'#ffd23f',q:[2,7,12,17,22]}
+{title:'6-1 DESAFIO',name:' BONUS',desc:'Desafio final de Lean, melhoria contínua e Obeya.',sky:['#e63946','#457b9d'],ground:'#343a40',accent:'#ffd23f',q:[25,26,27,28,29]}
 ];
 const layouts=[
  [[0,470,3900,70],[190,416,150,22],[430,352,145,22],[660,405,155,22],[910,328,145,22],[1140,390,160,22],[1390,345,145,22],[1625,410,155,22],[1870,340,150,22],[2110,400,145,22],[2340,360,145,22],[2580,410,160,22],[2830,333,150,22],[3070,395,155,22],[3320,325,155,22],[3570,405,150,22],[514,274,100,20],[714,230,90,20],[909,270,95,20],[1119,235,94,20],[1327,268,95,20]],
@@ -190,7 +196,7 @@ function drawStorageSprint27D(){
  X.fillStyle='#17202a';X.fillRect(580,370,310,8);X.fillStyle=pipeMicro.boxPlaced?'#7dff8a':'#00f5d4';X.fillRect(580,370,310*progress,8);
  X.fillStyle='#fff4cf';X.font='6px "Press Start 2P"';X.fillText('PROGRESSO ATE A AREA: '+Math.round(progress*100)+'%',580,355);
  // Setas direcionais somente enquanto a caixa estiver selecionada.
- if(pipeMicro.boxEngaged&&!pipeMicro.boxPlaced){const bob=Math.sin(t*7)*4;X.fillStyle='#ffd23f';X.font='22px "Press Start 2P"';X.fillText('←',b.x-39-bob,b.y+33);X.fillText('→',b.x+b.w+10+bob,b.y+33);X.strokeStyle='#fff4cf';X.lineWidth=2;X.strokeRect(b.x-5,b.y-5,b.w+10,b.h+10);X.fillStyle='#fff4cf';X.font='6px "Press Start 2P"';X.fillText('PERSONAGEM VINCULADO',b.x-18,b.y-13)}
+ if(pipeMicro.boxEngaged&&!pipeMicro.boxPlaced){const bob=Math.sin(t*7)*4;X.fillStyle='#ffd23f';X.font='22px "Press Start 2P"';X.fillText('←',b.x-39-bob,b.y+33);X.fillText('→',b.x+b.w+10+bob,b.y+33);X.strokeStyle='#fff4cf';X.lineWidth=2;X.strokeRect(b.x-5,b.y-5,b.w+10,b.h+10)}
  // Feedback de proximidade e alinhamento correto.
  if(pipeMicro.boxNearAligned&&!pipeMicro.boxPlaced){X.fillStyle='rgba(125,255,138,.18)';X.fillRect(790,397,140,77);X.strokeStyle='#7dff8a';X.lineWidth=4;X.strokeRect(806,410,106,64);X.fillStyle='#7dff8a';X.font='7px "Press Start 2P"';X.fillText('ALINHAMENTO CORRETO',778,394)}
  // Destaque temporario da rota elevada apos o posicionamento.
@@ -428,7 +434,7 @@ function drawRareCardIcon(c,bob){
 function drawExploration(){
  for(const c of collectibles){if(c.got)continue;const bob=Math.sin(performance.now()/220+c.phase)*3;drawCoinIcon(c,bob)}
 }
-function solids(){const list=obstacles().filter(o=>!['oil','spill'].includes(o.type));if(pipeMicro.active&&pipeMicro.type==='storage'&&pipeMicro.storageBox&&!pipeMicro.boxEngaged)list.push(pipeMicro.storageBox);if(pipeMicro.active&&pipeMicro.type==='movement'&&pipeMicro.movementCargo&&!pipeMicro.movementCargoEngaged)list.push(pipeMicro.movementCargo);return list}
+function solids(){const list=obstacles().filter(o=>!['oil','spill'].includes(o.type));if(pipeMicro.active&&pipeMicro.type==='storage'&&pipeMicro.storageBox)list.push(pipeMicro.storageBox);if(pipeMicro.active&&pipeMicro.type==='movement'&&pipeMicro.movementCargo&&!pipeMicro.movementCargoEngaged)list.push(pipeMicro.movementCargo);return list}
 function overlap(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y}
 function step(dt){
  if(!state.playing||state.paused||finishGuard)return;
@@ -499,29 +505,26 @@ function operateMovementSequence(){
 function stepStorageMechanics(dt){
  if(!pipeMicro.active||pipeMicro.type!=='storage'||!pipeMicro.storageBox)return;
  const b=pipeMicro.storageBox,center=player.x+player.w/2;
- pipeMicro.nearStorageBox=Math.abs(center-(b.x+b.w/2))<92&&Math.abs((player.y+player.h)-b.y)<72;
+ pipeMicro.nearStorageBox=Math.abs(center-(b.x+b.w/2))<78&&Math.abs((player.y+player.h)-b.y)<66;
  if(pipeMicro.routeHighlightTimer>0)pipeMicro.routeHighlightTimer=Math.max(0,pipeMicro.routeHighlightTimer-dt);
  if(pipeMicro.alignmentFlash>0)pipeMicro.alignmentFlash=Math.max(0,pipeMicro.alignmentFlash-dt);
- pipeMicro.boxNearAligned=!pipeMicro.boxPlaced&&b.x+b.w>=790&&b.x<855;
+ pipeMicro.boxNearAligned=!pipeMicro.boxPlaced&&b.x>=775&&b.x<805;
  if(pipeMicro.boxPlaced){pipeMicro.boxEngaged=false;return}
  if(pipeMicro.boxEngaged){
-  const left=!!(keys.arrowleft||keys.a),right=!!(keys.arrowright||keys.d),direction=Number(right)-Number(left);
+  const direction=Math.sign(player.vx);
   if(direction){
-   const nx=Math.max(535,Math.min(840,b.x+direction*104*dt));
-   const blocked=obstacles().some(o=>!['oil','spill'].includes(o.type)&&o.x<770&&nx<o.x+o.w&&nx+b.w>o.x&&b.y<o.y+o.h&&b.y+b.h>o.y);
+   const nx=Math.max(535,Math.min(845,b.x+direction*78*dt));
+   const blocked=obstacles().some(o=>!['oil','spill'].includes(o.type)&&nx<o.x+o.w&&nx+b.w>o.x&&b.y<o.y+o.h&&b.y+b.h>o.y);
    if(!blocked)b.x=nx;
   }
-  // Mesmo padrão da Fase 5: personagem permanece vinculado à lateral da caixa.
-  const operatorSide=player.face>=0?-player.w-6:b.w+6;
-  player.x=Math.max(0,Math.min(2200-player.w,b.x+operatorSide));player.y=Math.min(player.y,b.y-player.h);player.vx=0;
-  if(pipeMicro.boxNearAligned&&pipeMicro.alignmentFlash<=0){pipeMicro.alignmentFlash=1.2;AudioEngine.effect('life');flashMessage('CAIXA PRÓXIMA · CONTINUE ATÉ O ENCAIXE')}
-  // Encaixe automático quando a frente da caixa entra na área marcada.
-  if(b.x+b.w>=806){b.x=825;b.y=418;pipeMicro.boxPlaced=true;pipeMicro.boxNearAligned=false;pipeMicro.boxEngaged=false;pipeMicro.routeHighlightTimer=5;state.score+=150;AudioEngine.effect('correct');flashMessage('CAIXA POSICIONADA · ROTA ELEVADA LIBERADA · +150');updateHud();updateMicroObjective()}
+  if(pipeMicro.boxNearAligned&&pipeMicro.alignmentFlash<=0){pipeMicro.alignmentFlash=1.2;AudioEngine.effect('life');flashMessage('CAIXA PROXIMA · ALINHAMENTO CORRETO · CONTINUE')}
+  // Zona marcada de posicionamento seguro.
+  if(b.x>=805&&b.x<=845){b.x=825;b.y=418;pipeMicro.boxPlaced=true;pipeMicro.boxNearAligned=false;pipeMicro.boxEngaged=false;pipeMicro.routeHighlightTimer=5;state.score+=150;AudioEngine.effect('correct');flashMessage('CAIXA POSICIONADA · ROTA ELEVADA LIBERADA · +150');updateHud();updateMicroObjective()}
  }
 }
 function operateStorageBox(){
  if(!pipeMicro.active||pipeMicro.type!=='storage'||!pipeMicro.nearStorageBox||pipeMicro.boxPlaced)return false;
- pipeMicro.boxEngaged=!pipeMicro.boxEngaged;AudioEngine.effect('stomp');flashMessage(pipeMicro.boxEngaged?'CAIXA VINCULADA · SEGURE ← OU → ATÉ O ENCAIXE':'CAIXA LIBERADA');updateMicroObjective();return true
+ pipeMicro.boxEngaged=!pipeMicro.boxEngaged;AudioEngine.effect('stomp');flashMessage(pipeMicro.boxEngaged?'CAIXA SELECIONADA · USE ← → PARA POSICIONAR':'CAIXA LIBERADA');updateMicroObjective();return true
 }
 function pipeSteamActive(){
  if(!pipeMicro.active||pipeMicro.type!=='pipe'||pipeMicro.valveClosed)return false;
@@ -549,7 +552,7 @@ function respawnPlayer(){loseLife('QUEDA')}
 function loop(t,token){if(token!==runToken||!state.playing)return;let frame=Math.min((t-last)/1000,.05);last=t;acc+=frame;while(acc>=1/120&&state.playing&&!finishGuard){step(1/120);acc-=1/120}draw();if(token===runToken&&state.playing&&!finishGuard)raf=requestAnimationFrame(nt=>loop(nt,token))}
 function interact(){if(!state.playing)return;if(operateMovementSequence())return;if(operateStorageBox())return;if(operatePipeValve())return;if(nearSecret){discoverSecret();return}if(!near)return;state.paused=true;openQuestion(near)}
 // Distribuição planejada das respostas corretas: 9 em A, 8 em B e 8 em C, sem sequência previsível.
-const correctSlots=[2,0,3,1,2,1,3,0,2,1,3,0,2,1,3,2,0,3,1,2,1,3,0,2,1];
+const correctSlots=[2,0,3,1,2,1,3,0,2,1,3,0,2,1,3,2,0,3,1,2,3,1,2,0,2,2,0,2,1,3];
 function arrangedOptions(q,questionIndex){
  const correct={txt:q[2][q[3]],ok:true};
  const wrong=q[2].map((txt,i)=>({txt,ok:false,original:i})).filter(x=>x.original!==q[3]);
